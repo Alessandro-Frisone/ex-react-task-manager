@@ -15,8 +15,8 @@ export function GlobalProvider({children}){
 
 
     return(
-        <GlobalContext.provider value={{tasks, SetTasks}}>
+        <GlobalContext.Provider value={{tasks, SetTasks}}>
             {children}
-        </GlobalContext.provider>
+        </GlobalContext.Provider>
     )
 }
