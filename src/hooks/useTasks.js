@@ -12,8 +12,16 @@ export default function useTasks(){
         .catch(error => console.error(error))
     }, [])  
 
-    const addTask = (newTask) => {
+    const addTask = async newTask => {
+      const response = await fetch(`${VITE_API_URL}/tasks`, {
+        method: `POST`,
+        headers: {"content-type": "application/json"},
+        body: JSON.stringify(newTask)
+      })
+      const { success, message, task } = await response.json()
+      if(!success) throw new Error(message)
 
+        SetTasks(prev => [...prev, task])
     }
 
     const removeTask = (taskId) => {
