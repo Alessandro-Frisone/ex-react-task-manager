@@ -228,3 +228,27 @@ td.done {
   background-color: #ccc;
   cursor: not-allowed;
 }
+.task-detail {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  max-width: 600px;
+  margin: 2rem auto;
+}
+
+.task-detail h1 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  color: #2c3e50;
+  text-align: center;
+}
+
+.task-detail p {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+.task-detail strong {
+  color: #222;
+}

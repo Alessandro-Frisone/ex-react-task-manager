@@ -7,6 +7,10 @@ import TaskList from "./pages/TaskList"
 //-----CONTEXT-----//
 import { GlobalProvider } from "./context/GlobalContext"
 
+
+//-----COMPONENTS-----//
+import TaskDetails from "./pages/TaskDetails"
+
 function App() {
 
   return (
@@ -19,6 +23,7 @@ function App() {
         <Routes>
           <Route path="/" element={<TaskList/>}/>
           <Route path="/add" element={<AddTask/>}/>
+          <Route path="/task/:id" element={<TaskDetails/>}/>
         </Routes>
       </BrowserRouter>
     </GlobalProvider>
