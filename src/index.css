@@ -8,36 +8,37 @@
 /* BASE STILE */
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f4f6f8;
-  color: #333;
+  background-color: #f2f4f8;
+  color: #2d2d2d;
   line-height: 1.6;
   padding: 2rem;
 }
 
-/* NAVBAR ELEGANTE */
+/* NAVBAR MODERNA */
 nav {
-  background-color: #fff;
+  background-color: #ffffff;
   padding: 1rem 2rem;
   display: flex;
-  gap: 1.5rem;
   justify-content: center;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  gap: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  border-radius: 12px;
   position: sticky;
   top: 0;
-  z-index: 10;
+  z-index: 100;
 }
 
 nav a {
-  color: #555;
+  color: #333;
   text-decoration: none;
-  font-weight: 500;
-  padding: 0.5rem 1rem;
-  border-radius: 8px;
+  font-weight: 600;
+  padding: 0.5rem 1.2rem;
+  border-radius: 10px;
   transition: all 0.3s ease;
 }
 
 nav a:hover {
-  background-color: #e3eaf2;
+  background-color: #eaf3ff;
   color: #0077cc;
 }
 
@@ -48,17 +49,17 @@ nav a.active {
 
 /* LAYOUT */
 main {
-  max-width: 800px;
+  max-width: 900px;
   margin: 2rem auto;
   padding: 2rem;
   background-color: white;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
 }
 
 /* TIPOGRAFIA */
 h1, h2, h3 {
-  color: #222;
+  color: #1f2d3d;
   margin-bottom: 1rem;
 }
 
@@ -67,9 +68,10 @@ p {
 }
 
 h1 {
-  font-size: 2rem;
+  font-size: 2.2rem;
   margin-bottom: 1.5rem;
   color: #2c3e50;
+  text-align: center;
 }
 
 /* PULSANTI */
@@ -77,29 +79,35 @@ button {
   background-color: #0077cc;
   color: white;
   border: none;
-  padding: 0.6rem 1.2rem;
+  padding: 0.65rem 1.3rem;
   font-size: 1rem;
-  border-radius: 8px;
+  border-radius: 10px;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s ease;
+  margin-right: 0.5rem;
 }
 
 button:hover {
   background-color: #005fa3;
 }
 
+button:disabled {
+  background-color: #bbb;
+  cursor: not-allowed;
+}
+
 /* MODULI */
-input, textarea {
+input, textarea, select {
   width: 100%;
-  padding: 0.6rem;
+  padding: 0.7rem;
   margin: 0.5rem 0 1rem 0;
   border: 1px solid #ccc;
-  border-radius: 8px;
+  border-radius: 10px;
   font-size: 1rem;
   transition: border-color 0.3s;
 }
 
-input:focus, textarea:focus {
+input:focus, textarea:focus, select:focus {
   outline: none;
   border-color: #0077cc;
 }
@@ -114,17 +122,17 @@ table {
 thead th {
   text-align: left;
   padding: 12px 16px;
-  background-color: #ecf0f1;
-  color: #34495e;
-  font-size: 0.95rem;
-  border-radius: 8px 8px 0 0;
+  background-color: #dfeaf1;
+  color: #2c3e50;
+  font-size: 1rem;
+  border-radius: 10px 10px 0 0;
 }
 
 tbody tr {
   background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-  border-radius: 8px;
-  transition: transform 0.2s;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+  border-radius: 10px;
+  transition: transform 0.2s ease;
 }
 
 tbody tr:hover {
@@ -139,37 +147,38 @@ tbody td {
 
 /* BADGE STATUS */
 td.todo {
-  background-color: #e72f2f;
+  background-color: #ffcdd2;
   font-weight: 600;
-  color: rgb(0, 0, 0);
+  color: #b71c1c;
 }
 
 td.doing {
-  background-color: #f1ef44;
+  background-color: #fff59d;
   font-weight: 600;
-  color: #070505;
+  color: #f57f17;
 }
 
 td.done {
-  background-color: #26d36e;
+  background-color: #c8e6c9;
   font-weight: 600;
-  color: rgb(0, 0, 0);
+  color: #2e7d32;
 }
 
+/* FORM TASK */
 .task-form {
   background-color: #ffffff;
   padding: 2rem;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-  max-width: 600px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  max-width: 700px;
   margin: 2rem auto;
 }
 
 .task-form h1 {
-  font-size: 1.8rem;
-  margin-bottom: 1.5rem;
+  font-size: 2rem;
   color: #2c3e50;
   text-align: center;
+  margin-bottom: 1.5rem;
 }
 
 .task-form .form-group {
@@ -178,27 +187,9 @@ td.done {
 
 .task-form label {
   display: block;
-  font-weight: 500;
+  font-weight: 600;
   margin-bottom: 0.5rem;
   color: #333;
-}
-
-.task-form input,
-.task-form textarea,
-.task-form select {
-  width: 100%;
-  padding: 0.6rem;
-  font-size: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  transition: border-color 0.3s;
-}
-
-.task-form input:focus,
-.task-form textarea:focus,
-.task-form select:focus {
-  outline: none;
-  border-color: #0077cc;
 }
 
 .task-form .error-text {
@@ -207,41 +198,14 @@ td.done {
   margin-top: 0.5rem;
 }
 
-.task-form button {
-  background-color: #0077cc;
-  color: white;
-  border: none;
-  padding: 0.7rem 1.4rem;
-  font-size: 1rem;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-  display: block;
-  margin-top: 1rem;
-}
-
-.task-form button:hover {
-  background-color: #005fa3;
-}
-
-.task-form button:disabled {
-  background-color: #ccc;
-  cursor: not-allowed;
-}
+/* DETTAGLIO TASK */
 .task-detail {
   background-color: white;
   padding: 2rem;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-  max-width: 600px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  max-width: 700px;
   margin: 2rem auto;
-}
-
-.task-detail h1 {
-  font-size: 1.8rem;
-  margin-bottom: 1.5rem;
-  color: #2c3e50;
-  text-align: center;
 }
 
 .task-detail p {
@@ -250,16 +214,17 @@ td.done {
 }
 
 .task-detail strong {
-  color: #222;
+  color: #1f2d3d;
 }
 
+/* MODALE */
 .modal-overlay {
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.5); /* sfondo scuro semitrasparente */
+  background-color: rgba(0, 0, 0, 0.5);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -269,18 +234,17 @@ td.done {
 .modal {
   background-color: #fff;
   padding: 2rem;
-  border-radius: 12px;
+  border-radius: 16px;
   max-width: 500px;
   width: 90%;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
   animation: fadeInScale 0.3s ease;
 }
 
 .modal h2 {
-  margin-top: 0;
+  margin: 0 0 1rem;
   font-size: 1.5rem;
   color: #2c3e50;
-  margin-bottom: 1rem;
 }
 
 .modal-action {
@@ -288,15 +252,6 @@ td.done {
   display: flex;
   justify-content: flex-end;
   gap: 1rem;
-}
-
-.modal-action button {
-  padding: 0.6rem 1.2rem;
-  font-size: 1rem;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
 }
 
 .modal-action button:first-child {
@@ -317,7 +272,7 @@ td.done {
   background-color: #c0392b;
 }
 
-/* Animazione modale */
+/* ANIMAZIONE */
 @keyframes fadeInScale {
   0% {
     opacity: 0;
